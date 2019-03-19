@@ -1,0 +1,42 @@
+DECLARATION, INITIALIZATION AND DEFINITION IN JAVA SCRIPT
+Declaration
+Giving a variable a name using the key word ‘var’.
+	Examples: var blinknumber;
+		  var message;
+		       var percentage;
+One can also declare multiple variable with the same var keyword.
+	Example: var blinknumber, message;
+One should not re-declare the same variable twice.
+
+Initialization
+Storing a value in a declared variable. The value could be of type string, integer or float.
+There are 2 ways of initialization:
+      •	Initializing at the time of creation of the variable.
+	Example: var blinknumber = 10;
+	     var message = “Hello World!”;
+	     var blinknumber, message = 10, “Hello World!”;
+	     var percentage = 50.0%;
+      •	Declaring a variable then initializing it later when one needs to use it.
+	Example: var percentage;
+	     percentage = 50.0%;
+	
+Definition
+Naming a function and specifying what to do when the function is called.
+It consists of the function keyword, the name of the function, a list of parameters to the function separated by commas and the code to be executed on the function placed inside curly brackets.
+Functions are named using the camelCase notation.
+It can be done in 2 ways:
+      •	Function declaration
+        Example: function name(parameter1, parameter 2, parameter 3) {
+                 // code to be executed
+                 }
+
+                 function dopeStuff(a,b,c) {
+                 return a + b + c;
+                 }
+
+      •	Function expression
+        This is whereby a function is defined and stored inside a variable thus it does not necessarily need a name. This is called an anonymous function.
+	       Example:  var x = function (a,b,c) {return a + b + c};
+        However, a function name can also be given in some cases if one wants to refer to the function within the function.
+	       Example: var x = function dopeStuff(a) {return a>1? a : a * dopeStuff(a+1); };
+

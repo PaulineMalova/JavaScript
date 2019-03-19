@@ -1,0 +1,12 @@
+DIFFERENCES BETWEEN UNDEFINED AND NULL IN JAVA SCRIPT
+1. (a) Undefined-it means that a variable has been declared but a value has not been    assigned to it yet.
+   (b) Null-it is an assignment value that represents ‘no value’. When null is assigned to a variable, it means that that variable has no value.
+
+2. (a) Undefined is a variable type.
+   (b)Null is an abject value.
+
+3. (a) Undefined is not treated as a number and would return the “not-a-number” error if it’s added to a numeral.
+   (b) Null is treated as zero when it is made part of arithmetical operations.
+
+4. (a) Undefined can be an identifier for a property of the global object.
+   (b)Null cannot be used as an identifier for a property of the global object.
