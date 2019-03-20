@@ -9,18 +9,22 @@ One can also declare multiple variable with the same var keyword.
 One should not re-declare the same variable twice.
 
 Initialization
+When you declare a variable, it is automatically given an initial value, which is 'undefined'.
+	Example: var blinknumber;   - its already initialized to 'undefined' value.
+
+Definition of a variable
 Storing a value in a declared variable. The value could be of type string, integer or float.
-There are 2 ways of initialization:
-      •	Initializing at the time of creation of the variable.
+There are 2 ways of definition:
+      •	Defining at the time of creation of the variable.
 	Example: var blinknumber = 10;
 	     var message = “Hello World!”;
 	     var blinknumber, message = 10, “Hello World!”;
 	     var percentage = 50.0%;
-      •	Declaring a variable then initializing it later when one needs to use it.
+      •	Declaring a variable then defining it later when one needs to use it.
 	Example: var percentage;
-	     percentage = 50.0%;
+	         percentage = 50.0%;
 	
-Definition
+Definition of a function
 Naming a function and specifying what to do when the function is called.
 It consists of the function keyword, the name of the function, a list of parameters to the function separated by commas and the code to be executed on the function placed inside curly brackets.
 Functions are named using the camelCase notation.
