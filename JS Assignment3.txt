@@ -9,5 +9,13 @@
 2.Write a function that given a fruit index, it returns the name of a fruit from a list of fruits.
 
 	var fruit_index = prompt("Pick a number from 0-4 and you will get a fruit.");
-	console.log(fruits_list[fruit_index]);
 	function getFruit(fruits_list,fruit_index) { alert(fruits_list[fruit_index]); }
+
+
+The general formula for calling a function is:
+	functionName(parameters)
+
+Applying to the questions above, 
+	printFruits(fruits_list)
+
+	getFruit(fruits_list,fruit_index)
