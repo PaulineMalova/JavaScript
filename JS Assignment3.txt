@@ -19,3 +19,36 @@ Applying to the questions above,
 	printFruits(fruits_list)
 
 	getFruit(fruits_list,fruit_index)
+
+
+
+CORRECTIONS
+
+1.
+function printFruits(fruits_list) {
+    
+	for (var i=0; i<fruits_list.length; i++) {
+		
+		console.log(fruits_list[i]);
+   
+	}
+
+}
+
+
+
+
+printFruits(fruits_list)
+
+apples
+passion
+pineapple
+
+banana
+
+orange
+
+2.
+function getFruit(i, myfruitsList) {
+	console.log(myfruitsList[i])
+}
