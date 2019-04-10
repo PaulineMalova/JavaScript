@@ -1,0 +1,38 @@
+1.Write a program to calculate purchases from a kiosk. For e.g. given the fruit name 'orange' the program should fetch its price (30.00) and multiply with the quantity requested (2) and return total cost in this printed format (2 Oranges for KES 60.00). 
+
+function calculateFruitCost(fruitName,quantity) {
+
+	var fruits={"bananas":10,"oranges":15,"apples":30,"melons":50};
+
+	var totalCost=fruits[fruitName]*quantity;
+
+	return quantity+" "+fruitName+" "+"for KES"+" "+totalCost
+
+}
+
+
+
+
+
+var fruits={"banana":10,"orange":15,"kiwi":50,"melon":200};
+
+
+
+for (prop in fruits){ console.log(prop); }
+
+banana
+
+orange
+
+kiwi
+
+melon
+
+
+
+
+for (prop in fruits){ console.log(prop, fruits[prop]); }
+banana 10
+orange 15
+kiwi 50
+melon 200
