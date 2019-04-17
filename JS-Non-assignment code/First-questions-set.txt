@@ -1,0 +1,39 @@
+NUMBER ONE
+Assume I have this object:
+
+let myFruits = {
+  
+orange: 10,
+
+  apple: 30,
+
+  passion: 50,
+
+  grapes: 100,
+
+  banana: 10,
+
+}
+
+
+How can I print a list of fruits and with their prices? e.g.
+orange => KES 10
+apple => KES 30 (edited) 
+
+function printFruits() {
+	let myFruits = {
+  		orange: 10,
+  		apple: 30,
+  		passion: 50,
+  		grapes: 100,
+  		banana: 10,
+	}
+	for (fruit in myFruits) {
+		if (myFruits.hasOwnProperty(fruit)) { 
+			console.log (fruit + " => KES" + myFruits[fruit]);
+       		}
+    	}
+}
+
+
+NUMBER TWO
