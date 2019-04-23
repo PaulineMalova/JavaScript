@@ -1,0 +1,30 @@
+Write a program Kiosk( ) that will allow you to add a fruit and retrieve a list of fruits to/from a kiosk using setter and getter methods.
+
+function Kiosk(){
+  var fruitsList=[];
+  
+  function setFruit(fruit){
+    fruitsList.push(fruit);
+  }
+  
+  function getFruits(){
+    return fruitsList;
+  }
+  
+  var publicAPI = {
+  setFruit: setFruit,
+  getFruits: getFruits
+  }
+  
+  return publicAPI;
+}
+
+
+var kiosk = Kiosk();
+kiosk.setFruit("mango")
+kiosk.setFruit("pawpaw")
+var fruits = kiosk.getFruits();
+console.log (fruits);
+
+On the Console:
+["mango", "pawpaw"]
