@@ -8,16 +8,16 @@ kioskCalc.getTotalCost( )  // returns “2 orange for KES 60”
 
 
 class KioskCalc{
-  constructor(fruit,quantity){
-    this.fruit=fruit;
-    this.quantity=quantity;
-    this.fruitsPriceList={"orange":30,"mango":15,"avocado":40};
-    this.totalCost=null;
-  }
-  getTotalCost(){
-    this.totalCost=(this.fruitsPriceList[this.fruit])*(this.quantity);
-    return(this.quantity+" "+this.fruit+" "+"for KES "+this.totalCost);
-  }
+	constructor(fruit,quantity){
+		this.fruit=fruit;
+		this.quantity=quantity;
+		this.fruitsPriceList={"orange":30,"mango":15,"avocado":40};
+		this.totalCost=null;
+  	}
+	getTotalCost(){
+		this.totalCost=(this.fruitsPriceList[this.fruit])*(this.quantity);
+		return(this.quantity+" "+this.fruit+" "+"for KES "+this.totalCost);
+  	}
 }
 
 let kioskCalc=new KioskCalc("orange",2);
