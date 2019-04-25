@@ -1,0 +1,37 @@
+Write a class KioskCalc that has the following fruitsPriceList object.
+this.fruitsPriceList = { "orange": 30, "mango": 15, "avocado": 40 }; 
+and takes two parameters (fruit, quantity) when initialized i.e. 
+var kioskCalc = new KioskCalc(“orange”, 2);
+Thereafter, it allows one to calculate the total cost of the fruit by accessing the getTotalCost( ) method. 
+kioskCalc.getTotalCost( )  // returns “2 orange for KES 60” 
+
+
+
+class KioskCalc{
+  constructor(fruit,quantity){
+    this.fruit=fruit;
+    this.quantity=quantity;
+    this.fruitsPriceList={"orange":30,"mango":15,"avocado":40};
+    this.totalCost=null;
+  }
+  getTotalCost(){
+    this.totalCost=(this.fruitsPriceList[this.fruit])*(this.quantity);
+    return(this.quantity+" "+this.fruit+" "+"for KES "+this.totalCost);
+  }
+}
+
+let kioskCalc=new KioskCalc("orange",2);
+console.log(kioskCalc.getTotalCost());
+
+let kioskCalc1=new KioskCalc("mango",4);
+console.log(kioskCalc1.getTotalCost());
+
+let kioskCalc2=new KioskCalc("avocado",7);
+console.log(kioskCalc2.getTotalCost());
+
+
+
+RESULT:
+"2 orange for KES 60"
+"4 mango for KES 60"
+"7 avocado for KES 280"
