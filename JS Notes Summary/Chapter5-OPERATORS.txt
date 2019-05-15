@@ -1,0 +1,40 @@
+1). Addition operator (+)
+    -Used for adding numbers.
+	example: 1+2	            //3
+		var d = 3;
+		var f = 50;
+		var h = d + f;           //h=53
+    -Also used for concatenation of strings, either with other strings or numbers.
+	example: "Cats are" + 2 + "times stubborn."       //Cats are 2 times stubborn.
+
+2). Subtraction (-)
+    -Used to get the difference between numbers.
+	example:  70-35                 //35
+
+3). Division (/)
+    -
+	example:     25/5                //5
+
+4). Multiplication (*)
+    -Used to get the product of numbers.
+	example:     30*15              //450
+
+5). Modulus (%)
+    -Used to get the remainder of a division operation.
+	example:      20%6             //2
+
+There are also combined assignment and operation operators:
+	examples:     /=
+		     *=
+		     -=
+		     +=
+		     %=
+
+Java Script also has a Math module that contains more advanced functions:
+	examples:    Math.abs - calculates the absolute value of a number.
+		    Math.exp - calculates e to the power of a number.
+		    Math.pow(x,y) - calculates the result of x to the power of y.
+		    Math.floor - removes the fraction part from a number.
+		    Math.random() - gives a random number x where 0<=x<1
+
+		

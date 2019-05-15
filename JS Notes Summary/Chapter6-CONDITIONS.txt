@@ -1,0 +1,44 @@
+1). The IF statement
+    -Allows one to check whether the given expression is true or false.
+    -The expression is executed differently depending on whether it is true or false.
+ 	example:    if (a>=2){
+		    console.log(a);
+		  }
+		  else{
+		     console.log("It's less than required.");
+		  }
+    **Strict equals/comparison - checks whether both the value and type of a variable are the same.
+    **Loose equals/comparison - checks whether the value of variables is the same; but not the type.
+	examples:       1 == "1"            //true
+		        1 === "1"        //false
+
+    *Inequality expressions can be used to evaluate expressions. They include:
+	> - Greater than.	>= - Greater than or equal to.	             == - Loosely equal to.
+	< - Less than.	<= - Less than or equal to.	             === - Strictly equal to.
+	!= - Not equal to.
+    
+    *Logical operators are also useful in evaluation of expressions.
+	&& - AND operator - checks if both expressions are true.
+	|  | - OR operator - checks if at least one of the expressions is true.
+	! - NOT operator
+
+2).The SWITCH statement
+    -It can be used in place of the if statement.
+	example: 
+		switch(a) {
+		    case 80:
+		            return "A";
+		            break;
+		    case 70:
+		    case 60:
+		             return "C";
+		             break;
+		    default:
+		             return "F";
+		             break;
+		}
+	
+	** The 'default' corresponds with the 'else' statement while using the if statement.
+	**The 'break' statement is used to prevent the next code block from being executed before its rightful turn.
+	**Absence of the 'break' statement leads to fall-through.
+

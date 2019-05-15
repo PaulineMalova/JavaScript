@@ -1,0 +1,19 @@
+Arrays - they are used to hold a range of variables.
+Arrays function like a list, stack or queue.
+Arrays are defined in 2 ways:
+	a) Bracket notation 
+	     example: var fruitslist = ["apples","mangoes","oranges"];
+	b) Array object notation
+	     example: var fruitslist = new Array("apples","mangoes","guavas");
+Indices are used to access the values stored in an array according to their positions.
+The first number is at index 0, the second at one and so on.
+For instance, in the fruitslist declared above:
+	fruitslist[0] = "apples";
+	fruitslist[2] = "oranges";
+Arrays in Java Script are sparse, in that one can asign values to random locations in the array, regardless of whether or not the previous positions are occupied.
+For instance:
+	fruitslist[6] = "pawpaws";
+	fruitslist = ["apples","mangoes","oranges",undefined,undefined,undefined,"pawpaws"]
+Different types of elements can be stored in a single array.
+For example: 
+	var random = ["books", 34, {"marks":80},[1,2,3,4]];

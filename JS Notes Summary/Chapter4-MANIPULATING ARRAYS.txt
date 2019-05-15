@@ -1,0 +1,28 @@
+Various commands can be used to perform specific tasks on the arrays.
+These commands include:
+	1). Push - adding an element to the end of an array.
+		example: var arma = ["great"];
+			arma.push("excellent");
+			arma.push("marvelous");
+		New array: arma = ["great","excellent","marvelous"]
+
+	2).Pop - prints out the last element in an array and removes it from the array.
+		example: arma.pop();
+	Result:      "marvelous"
+	New array: arma = ["great","excellent"]
+
+	3).Shift - prints out the first element in an array and removes it from the array.
+		example: arma.shift();
+	Result:      "great"
+	New array: arma = ["excellent"]
+
+	4). Unshift - adding an element to the beginning of an array.
+		example: arma.unshift("good trial");
+	New array: arma = ["good trial","excellent"]
+
+	5). Splice - removes a specified part of an array to create a new array.
+		example: var randomNumbers = [1,2,3,4,5,6,7,8,9];
+			randomNumbers.splice(5,7);
+		Result:      [5,6,7]
+		Previous array: randomNumbers = [1,2,3,4,8,9]
+

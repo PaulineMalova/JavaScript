@@ -1,0 +1,34 @@
+Variables are used as placeholders for values in JavaScript. 
+A variable is first declared using the 'var' keyword then its name and can store any type of values which are listed below.
+
+
+a) Number- both integers and floating point numbers. 
+	Example: var cars = 40;    
+		var marks = 89.40;
+
+
+b) String - text, is usually enclosed in quotes. 
+	Example: var grade="A";
+
+
+c) Boolean- return value is usually either 'true' or 'false'. 
+	Example: var answer="true";
+
+
+d) Array - a list of items enclosed in box brackets. '[ ]' 
+	Example: var fruits=["mango", "apple", "pawpaw"]
+
+
+e) Object - similar to arrays, but containing a key and its value. 
+	Example: var obj= {"mango":20, "pawpaw":50, "apple":30}
+
+
+f) Null - this is an empty variable that could be assigned a different value later. 
+	Example: var buttons=null;
+
+
+g) Undefined - this is when a variable is declared but given no value. All variables are initially assigned to the 'undefined' value before they're given a value. 
+	Example: var myFruits;   //it's automatically given the value 'undefined'.
+
+
+-To get the variable type of an already defined variable, ony types 'typeof varName' on the console.

@@ -1,0 +1,7 @@
+-Java Script allows one to do some front-end programming in that it changes the behavior of the web pages created in HTML and CSS and also their appearance. 
+-It can also be used to code the back-end using the Node-JS library.
+
+-One can see the output of code using the 'console.log' command, which enables the printing of the output on the console.
+ -Java Script is run on the browser.
+ An example is:      console.log("Hello, World!");     
+	              console.log("Java Script is a very functional and marketable programming language.");
