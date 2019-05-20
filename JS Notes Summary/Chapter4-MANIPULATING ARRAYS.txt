@@ -21,8 +21,11 @@ These commands include:
 	New array: arma = ["good trial","excellent"]
 
 	5). Splice - removes a specified part of an array to create a new array.
+		format: .splice(index,count)
 		example: var randomNumbers = [1,2,3,4,5,6,7,8,9];
-			randomNumbers.splice(5,7);
+			randomNumbers.splice(4,3);
 		Result:      [5,6,7]
 		Previous array: randomNumbers = [1,2,3,4,8,9]
-
+			var fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+			console.log(fruits.splice(2, 1));
+		Result:	["Apple"]

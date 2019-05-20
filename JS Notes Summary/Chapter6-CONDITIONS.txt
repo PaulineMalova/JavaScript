@@ -7,6 +7,17 @@
 		  else{
 		     console.log("It's less than required.");
 		  }
+
+	example2: if (marks>=80 && marks<=100) {
+			console.log("A")
+		}
+		else if (marks>=70 && marks<=79) {
+			console.log("B")
+		}
+		else {
+			console.log("F")
+		}
+
     **Strict equals/comparison - checks whether both the value and type of a variable are the same.
     **Loose equals/comparison - checks whether the value of variables is the same; but not the type.
 	examples:       1 == "1"            //true
@@ -19,7 +30,7 @@
     
     *Logical operators are also useful in evaluation of expressions.
 	&& - AND operator - checks if both expressions are true.
-	|  | - OR operator - checks if at least one of the expressions is true.
+	|| - OR operator - checks if at least one of the expressions is true.
 	! - NOT operator
 
 2).The SWITCH statement

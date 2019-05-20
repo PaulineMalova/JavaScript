@@ -12,8 +12,9 @@ b) String - text, is usually enclosed in quotes.
 
 
 c) Boolean- return value is usually either 'true' or 'false'. 
-	Example: var answer="true";
+	Example: var answer = true;
 
+		var answerTwo = false;
 
 d) Array - a list of items enclosed in box brackets. '[ ]' 
 	Example: var fruits=["mango", "apple", "pawpaw"]
