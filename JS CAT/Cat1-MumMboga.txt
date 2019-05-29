@@ -1,0 +1,173 @@
+class MumMboga {
+  
+  constructor() {
+    this.products = [];
+    this.cart = [];
+    this.orders = [];
+    this.customers  = [];
+    this.productCatalog = [];
+    this.orderCost = null;
+  }
+
+   addProduct( productId, name, price, quantity) {
+     this.products.push(productId);
+     this.products.push(name);
+     this.products.push(price);
+     this.products.push(quantity);
+   }
+  removeProduct(productId) {
+    if (this.products[0] === productId){
+      this.products = [];
+    }
+  }
+  updateProduct(productId, name, price, quantity) {
+    if (this.products[0] === productId){
+      this.products[1] = name;
+      this.products[2] = price;
+      this.products[3] = quantity;
+    }
+    else{
+      console.log("You could have entered the wrong id.")
+    }
+  }
+  getProduct(productId) {
+    if (this.products[0] === productId) {
+      console.log(this.products);
+    }
+    else{
+      console.log("The id you've entered matches none in the records.");
+    }
+  }
+  getProductCatalog(){
+    var product = this.products[1];
+    var price = this.products[2];
+    var quantity = this.products[3];
+    this.productCatalog.push(product);
+    this.productCatalog.push(price);
+    this.productCatalog.push(quantity);
+    console.log(this.productCatalog);
+  }
+  addToCart(cartId, product, orderQuantity, customerId){
+    this.cart.push(cartId);
+    this.cart.push(product);
+    this.cart.push(orderQuantity);
+    this.cart.push(customerId);
+  }
+  removeFromCart(productId) {
+    if (this.products[0] === productId) {
+      this.cart = [];
+    }
+  }
+  createOrder(orderId, cartId){
+    if (this.cart[0] === cartId) {
+      this.orders.push(orderId);
+      this.orders.push(cartId);
+    }
+  }
+  cancelOrder(orderId) {
+    if (this.orders[0] === orderId) {
+      this.orders = [];
+    }
+  }
+  calculateOrderCost(orderId) {
+    if (this.orders[0] === orderId) {
+      var pdt = this.cart[1];
+      var qt = this.cart[2];
+      if (pdt === this.productCatalog[0]) {
+        var unitPrice = (this.productCatalog[1]/(this.productCatalog[2]));
+        this.orderCost = unitPrice * qt
+        console.log(this.orderCost);
+      }
+    }
+  }
+  getOrder(orderId){
+    console.log(this.orders + this.orderCost);
+  }
+  addCustomer(customerId, name, email, address) {
+    this.customers.push(customerId);
+    this.customers.push(name);
+    this.customers.push(email);
+    this.customers.push(address);
+  }
+  removeCustomer(customerId) {
+    if (this.customers[0] === customerId) {
+      this.customers = [];
+    }
+  }
+  updateCustomer(customerId, name, email, address) {
+    if (this.customers[0] === customerId) {
+      this.customers[1] = name;
+      this.customers[2] = email;
+      this.customers[3] = address;
+    }
+  }
+  getCustomer(customerId) {
+    if (this.customers[0] === customerId) {
+      console.log(this.customers);
+    }
+    else{
+      console.log("Id does not match the one in the record.")
+    }
+  }
+ 
+}
+
+let product1 = new MumMboga();
+product1.addProduct("23789","Beans",35,1);
+product1.removeProduct("23789");
+product1.getProduct("23789");
+product1.addProduct("23789","Beans",39,1);
+product1.getProduct("23789");
+product1.updateProduct("23789","Beans",40,1);
+product1.getProduct("23789");
+product1.updateProduct("2389","Beans",40,1);
+product1.getProduct("2389");
+
+
+
+
+product1.getProductCatalog();
+
+
+
+
+product1.addToCart("34","Beans",10,"234");
+product1.removeFromCart("2389");
+product1.addToCart("20","Beans",20,"234");
+product1.createOrder("1","20");
+product1.cancelOrder("1");
+product1.createOrder("2","20");
+product1.calculateOrderCost("2");
+product1.getOrder("2");
+
+
+
+product1.addCustomer("2345","Shelly","shelly@gmail.com","23-78");
+product1.getCustomer("2345");
+product1.removeCustomer("2345");
+product1.getCustomer("2345");
+product1.addCustomer("234","Selly","selly@gmail.com","23-678");
+product1.updateCustomer("234","Sera","sera@gmail.com","3456");
+product1.getCustomer("234");
+
+
+RESULTS ON THE CONSOLE:
+First part:
+"The id you've entered matches none in the records."
+["23789", "Beans", 39, 1]
+["23789", "Beans", 40, 1]
+"The id you've entered matches none in the records."
+
+
+Second part:
+["Beans", 40, 1]
+
+
+Third part:
+"null"
+
+
+Fourth part:
+["2345", "Shelly", "shelly@gmail.com", "23-78"]
+"Id does not match the one in the record."
+["234", "Sera", "sera@gmail.com", "3456"]

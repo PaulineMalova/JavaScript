@@ -1,0 +1,6 @@
+The constructor to take FirstName and LastName.
+Should have a method: getFullName
+
+The constructor not to have any parameter.
+ Should have a method: setFullName(firstName,lastName)
+Should have a method: getFullName

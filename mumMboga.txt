@@ -1,0 +1,146 @@
+class MumMboga {
+  
+  constructor() {
+    this.products = [];
+    this.carts = [];
+    this.orders = [];
+    this.customers  = [];
+    this.productCatalog = [];
+  }
+
+  addProduct(productId,name,price,quantity) {
+    let product = {productId:productId,name:name,price:price,quantity:quantity};
+    this.products.push(product);
+  } 
+  
+  getProduct(productId) {
+    for (var i=0; i<this.products.length; i++) {
+      let product = this.products[i];
+      if (product.productId === productId) {
+        return (product);
+      }
+    }
+  }
+  
+  removeProduct(productId) {
+    let product = this.getProduct(productId);
+    let myIndex = this.products.indexOf(product);
+    this.products.splice(myIndex,1);
+  }
+  
+  updateProduct(productId, name, price, quantity) {
+    let product = this.getProduct(productId);
+    let myIndex = this.products.indexOf(product);
+    this.products[myIndex] = {productId:productId, name:name, price:price, quantity:quantity};
+  }
+  
+  getProductCatalog() {
+    for(var i=0; i<this.products.length; i++) {
+      let product = this.products[i];
+      let productsCatalog = {product:product.name, quantity:product.quantity, price:product.price};
+      this.productCatalog.push(productsCatalog);
+    }
+    return (this.productCatalog);
+  }
+  
+  addToCart(cartId, product, orderQuantity, customerId) {
+    let cart = {cartId:cartId, product:product, orderQuantity:orderQuantity, customerId:customerId};
+    this.carts.push(cart);
+  }
+  
+  getCart(cartId) {
+    for (var i=0; i<this.carts.length; i++) {
+      let cart = this.carts[i];
+      if (cart.cartId === cartId) {
+        return cart;
+      }
+    }
+  }
+  
+  removeFromCart(productId) {
+    let product = this.getProduct(productId);
+    let myIndex = this.carts.indexOf(product);
+    this.carts.splice(myIndex,1);
+  }
+  
+  createOrder(orderId,cartId) {
+    let order = {orderId:orderId, cartId:cartId};
+    this.orders.push(order);
+  }
+  
+  getOrder(orderId) {
+    for (var i=0; i<this.orders.length; i++) {
+      let order = this.orders[i];
+      if (order.orderId === orderId){
+        return order;
+      }
+    }
+  }
+  
+  cancelOrder(orderId) {
+    let order = this.getOrder(orderId);
+    let myIndex = this.orders.indexOf(order);
+    this.orders.splice(myIndex, 1);
+  }
+  
+  calculateOrderCost(orderId) {
+    let order = this.getOrder(orderId);
+    let cartId = order.cartId;
+    let cart = this.getCart(cartId);
+    let quantity = cart.
+  }
+  
+  addCustomer(customerId, name, email, address) {
+    let customer = {customerId:customerId, name:name, email:email, address:address};
+    this.customers.push(customer);
+  }
+  
+  getCustomer(customerId) {
+    for (var i=0; i<this.customers.length; i++) {
+      let customer = this.customers[i];
+      if (customer.customerId === customerId) {
+        return (customer);
+      }
+    }
+  }
+  
+  removeCustomer(customerId) {
+    let customer = this.getCustomer(customerId);
+    let myIndex = this.customers.indexOf(customer);
+    this.customers.splice(myIndex,1);
+  }
+  
+  updateCustomer(customerId, name, email, address) {
+    let customer = this.getCustomer(customerId);
+    let myIndex = this.customers.indexOf(customer);
+    this.customers[myIndex] = {customerId:customerId, name:name, email:email, address:address};
+  }
+  
+}
+
+let mumMboga = new MumMboga();
+mumMboga.addProduct(1,"Mangoes",20,100);
+mumMboga.addProduct(2,"Apples",30,50);
+mumMboga.addProduct(3,"Kales", 500,20);
+console.log(mumMboga.products);
+mumMboga.removeProduct(1);
+console.log(mumMboga.products);
+mumMboga.updateProduct(3,"Kales",700,30);
+console.log(mumMboga.products);
+console.log(mumMboga.getProductCatalog());
+
+mumMboga.addCustomer(1, "Leah", "leah@gmail.com", "BOX 45");
+mumMboga.addCustomer(2, "Lorrynn", "lorrynn@gmail.com", "BOX 38");
+console.log(mumMboga.getCustomer(1));
+mumMboga.removeCustomer(1);
+console.log(mumMboga.customers);
+mumMboga.updateCustomer(2,"Koigi","koigi@gmail.com","BOX 17");
+console.log(mumMboga.customers);
+
+mumMboga.addToCart("A35", "Kales", 36,2);
+mumMboga.addToCart("B36", "Apples", 25, 2);
+console.log(mumMboga.getCart("A35"));
+console.log(mumMboga.carts);
+mumMboga.removeFromCart(2);
+console.log(mumMboga.carts);
+
