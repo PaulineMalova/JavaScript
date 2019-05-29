@@ -40,7 +40,7 @@ class MumMboga {
       let productsCatalog = {product:product.name, quantity:product.quantity, price:product.price};
       this.productCatalog.push(productsCatalog);
     }
-    return (this.productCatalog);
+    console.log (this.productCatalog);
   }
   
   addToCart(cartId, product, orderQuantity, customerId) {
@@ -59,7 +59,7 @@ class MumMboga {
   
   removeFromCart(productId) {
     let product = this.getProduct(productId);
-    let myIndex = this.carts.indexOf(product);
+    let myIndex = this.carts.indexOf(product.name);
     this.carts.splice(myIndex,1);
   }
   
@@ -138,7 +138,7 @@ mumMboga.removeProduct(1);
 console.log(mumMboga.products);
 mumMboga.updateProduct(3,"Kales",700,30);
 console.log(mumMboga.products);
-console.log(mumMboga.getProductCatalog());
+mumMboga.getProductCatalog();
 
 
 mumMboga.addCustomer(1, "Leah", "leah@gmail.com", "BOX 45");
@@ -167,4 +167,4 @@ console.log(mumMboga.orders);
 console.log(mumMboga.calculateOrderCost("K23"));
 
 
-RESULT: All of them ran successfully.
+//RESULT: All of them ran successfully.
