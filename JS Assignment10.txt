@@ -1,0 +1,68 @@
+HTML
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Greens Kiosk</title>
+</head>
+<body>
+  <h1 id="title">Welcome to Greens Kiosk</h1>
+  <p>We sell fruits and vegetables</p>
+  <h3>Fruits</h3>
+  <ul id="fruList">
+    <li>Mangoes</li>
+    <li>Bananas</li>
+    <li>Water Melons</li>
+  </ul>
+  <h3>Vegetables</h3>
+  <ul id="vegList">
+    <li>Onions</li>
+    <li>Tomatoes</li>
+    <li>Kales</li>
+  </ul>
+</body>
+</html>
+
+
+QUESTIONS 
+Change document background color to silver 
+Change the font color for h1 title tag to green
+Change the font case for h3 title tags to uppercase
+Add one more fruit to the fruits list
+Add one more vegetable to the vegetables list
+
+
+JAVASCRIPT
+var body = document.body;
+body.style.backgroundColor = "silver";
+
+var title = document.getElementById("title");
+title.style.color = "green";
+
+var h3 = document.getElementsByTagName("h3");
+h3[0].style.textTransform = "uppercase";
+for (var i=0; i<h3.length; i++) {
+  h3[i].style.textTransform = "uppercase";
+}
+
+var fruit = document.getElementById("fruList");
+
+var newFruit = document.createElement("li");
+newFruit.innerHTML = "Pawpaws";
+fruit.appendChild(newFruit);
+
+var newerFruit = document.createElement("li");
+var text = document.createTextNode("Oranges")
+newerFruit.appendChild(text);
+fruit.appendChild(newerFruit);
+
+var vegetable = document.getElementById("vegList");
+
+var newVegetable = document.createElement("li");
+var text = document.createTextNode("Cabbage");
+newVegetable.appendChild(text);
+vegetable.appendChild(newVegetable);
+
+var newerVegetable = document.createElement("li");
+newerVegetable.innerHTML = "Amaranthus";
+vegetable.appendChild(newerVegetable);
