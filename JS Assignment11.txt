@@ -39,7 +39,7 @@ HTML:
 
 
 JAVASCRIPT
-#ONE:
+#NUMBER ONE:
 var title = document.getElementById("title");
 
 let timer = setInterval(colorChange, 1000);
@@ -54,7 +54,7 @@ function colorChange() {
   }
 }
 
-#TWO:
+#NUMBER TWO:
 caret.onclick = function() {
   var fruits = document.getElementById("fruList");
   if (fruits.style.display === "none") {
@@ -65,7 +65,7 @@ caret.onclick = function() {
   }
 }
 
-#THREE:
+#NUMBER THREE:
 caret2.onclick = function() {
   var veges = document.getElementById("vegList");
   if (veges.style.display === "none") {
@@ -76,7 +76,7 @@ caret2.onclick = function() {
   }
 }
 
-#FOUR:
+#NUMBER FOUR:
 btn1.onclick = () => {
   var text = document.getElementById("record");
   var value = text.value;
@@ -87,7 +87,7 @@ btn1.onclick = () => {
   fruit.appendChild(newFruit);
 }
 
-#FIVE:
+#NUMBER FIVE:
 var record2 = document.getElementById("record2");
 record2.addEventListener("keyup", function(event){
   if (event.keyCode === 13) {
