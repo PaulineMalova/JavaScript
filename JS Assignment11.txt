@@ -1,9 +1,9 @@
 Questions: 
-Animate the title to toggle between green and silver font color after each second
-Animate fruits list to be collapsible
-Animate vegetables list to be collapsible
-Add an input field to append a fruit to the fruits list on clicking a button submit fruit
-Add an input field to append a vegetable to the vegetables list on pressing enter button on the keyboard.
+1.Animate the title to toggle between green and silver font color after each second
+2.Animate fruits list to be collapsible
+3.Animate vegetables list to be collapsible
+4.Add an input field to append a fruit to the fruits list on clicking a button submit fruit
+5.Add an input field to append a vegetable to the vegetables list on pressing enter button on the keyboard.
 
 HTML:
 <!DOCTYPE HTML>
