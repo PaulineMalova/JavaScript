@@ -1,0 +1,103 @@
+Questions: 
+Animate the title to toggle between green and silver font color after each second
+Animate fruits list to be collapsible
+Animate vegetables list to be collapsible
+Add an input field to append a fruit to the fruits list on clicking a button submit fruit
+Add an input field to append a vegetable to the vegetables list on pressing enter button on the keyboard.
+
+HTML:
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Greens Kiosk</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+  <h1 id="title">Welcome to Greens Kiosk</h1>
+  <p>We sell fruits and vegetables</p>
+  <h3>
+    <span id = "caret"><i class="fas fa-caret-right"></i></span>
+    Fruits</h3>
+  <ul id="fruList">
+    <li>Mangoes</li>
+    <li>Bananas</li>
+    <li>Water Melons</li>
+  </ul>
+  <input id = "record"/>
+  <button type="submit" id="btn1">SUBMIT</button>
+  <h3>
+    <span id = "caret2"><i class="fas fa-caret-right"></i></span>
+    Vegetables</h3>
+  <ul id="vegList">
+    <li>Onions</li>
+    <li>Tomatoes</li>
+    <li>Kales</li>
+  </ul>
+  <input id = "record2"/>
+</body>
+</html>
+
+
+JAVASCRIPT
+#ONE:
+var title = document.getElementById("title");
+
+let timer = setInterval(colorChange, 1000);
+
+function colorChange() {
+  if (title.style.color == "silver") {
+    title.style.color = "green"
+  }
+  
+  else{
+    title.style.color = "silver"
+  }
+}
+
+#TWO:
+caret.onclick = function() {
+  var fruits = document.getElementById("fruList");
+  if (fruits.style.display === "none") {
+    fruits.style.display = "block";
+  } else {
+    fruits.style.display = "none";
+    
+  }
+}
+
+#THREE:
+caret2.onclick = function() {
+  var veges = document.getElementById("vegList");
+  if (veges.style.display === "none") {
+    veges.style.display = "block";
+  } else {
+    veges.style.display = "none";
+    
+  }
+}
+
+#FOUR:
+btn1.onclick = () => {
+  var text = document.getElementById("record");
+  var value = text.value;
+  var newFruit = document.createElement("li");
+  var addFruit = document.createTextNode(value);
+  var fruit = document.getElementById("fruList");
+  newFruit.appendChild(addFruit);
+  fruit.appendChild(newFruit);
+}
+
+#FIVE:
+var record2 = document.getElementById("record2");
+record2.addEventListener("keyup", function(event){
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    var value2 = record2.value;
+    var newVeg = document.createElement("li");
+    var addVeg = document.createTextNode(value2);
+    var veg = document.getElementById("vegList");
+    newVeg.appendChild(addVeg);
+    veg.appendChild(newVeg);
+  }  
+});
+
